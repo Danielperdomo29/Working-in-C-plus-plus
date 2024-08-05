@@ -1,0 +1,246 @@
+Almacenar 300 números en un vector imprimir cuantos sin ceros, cuántos son negativos, cuantos positivos, imprimir además la  suma de los negativos y la suma de los positivos
+
+Solución [Acá el codigo]
+
+#include <iostream>
+using namespace std;
+int main()
+{
+//vector [300]
+// cuantos son negativos
+//cuantos son positivos
+// suma de los negativos 
+//suma de los positivos 
+cout<<"Algoritmo\n\n";
+int a[4];
+int b[4];
+int c[4];
+int d[4];
+int cont=0;
+int cont2=0;
+//-----------------llenar el vector-------------------------//
+for (int i=1;i<=4;i++){
+cout<<"Valor "<<i<<": ";
+cin>>a[i];
+    }
+for (int i=1;i<=4;i++){
+if (a[i]<0){
+        cont=cont+1;
+}
+}
+for (int i=1;i<=4;i++){
+if (a[i]>0){
+cont2=cont2+1;
+    }
+}
+//--------------------numero de datos mayores que 0---------
+cout<<"Numero de datos mayores que 0\n"<<cont2;
+cout<<endl;
+//--------------------------numero de datos menores que 0-------
+cout<<"Numero de datos menores que 0\n"<<cont;
+cout<<endl;
+//---------------------------------------------------------------------------//
+//---------------menores------------------------//
+for (int i=1;i<=cont;i++){
+    if (a[i]<0){
+for (int j=1;j<=2;j++)
+   b[j]=a[i];
+}
+}
+cout<<"Menores\n";
+for (int i=1;i<=cont;i++){
+cout<<"-> "<<b[i];
+cout<<endl;
+}
+//--------------------------------------------------------------//
+//mayores decir----
+for (int i=1;i<=cont2;i++){
+if (a[i]>0){
+for (int k=1;k<=cont2;k++){
+ c[k]=a[i];
+ }
+  }
+   }
+cout<<"Mayores\n";
+for (int i=1;i<=cont2;i++){
+cout<<"-> "<<c[i];
+cout<<endl;
+    }
+//----------------sumatoria de los positivos------------------------------//
+int suma=0;
+for (int i=1;i<=cont2;i++){
+suma=suma+c[i];
+    }
+//------------------------suma de los negativos--------------------------//
+int suma2=0;
+for (int i=1;i<=cont;i++){
+suma2=suma2;
+    }
+//-----------------------------resutados------------------------//
+cout<<"La sumatoria de los menores es:"<<suma2;cout<<endl;
+cout<<"La sumatoria de los mayores es: "<<suma;cout<<endl;
+return 0;
+
+}
+
+Almacenar 150 números en un vector, almacenarlos en otro vector en orden inverso al vector original e imprimir el vector resultante.
+
+Solución [Acá el codigo]
+
+// vector [150] datos;
+// almacenados en otro vector 
+//imprimir el vector resultante...
+//pasar los numeros del vector[b] al vector [b] al reves--..
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[150];
+    int b[150];
+ for (int i=1;i<=4;i++){
+       cout<<"Numero "<<i<<": ";
+       cin>>a[i];
+       cout<<endl;
+     }
+for (int i=1;i<=150;i++){
+        cout<<a[151-i]<<endl;
+    }
+  return 0;
+}
+
+Se tienen almacenado en la memoria dos vectores M y N de cien elementos cada uno, Hacer un algoritmo que escriba la palabra  “iguales” si ambos vectores son iguales y “diferentes” si no lo son.  Serán iguales cuando e la misma posición de ambos vectores se  tenga el mismo valor para todos son elementos.
+
+Solución [Acá el codigo]
+
+#include <iostream>
+using namespace std;
+//----------------------espacio para ejercicio-------------------------------
+//crear dos vectores m y n [100]
+//decir si son iguales o diferentes 
+//-------------------------inicio del proceso-----------------------------------
+int main()
+{
+    int m[100], n[100];
+   cout << "Algoritmo" << endl; 
+   for (int i=1; i<=100; i++){
+       cout<<"ingresar valor "<<i<<": "; 
+       cin>>m[i];
+       }
+ for (int i=1; i<=100; i++){
+       cout<<"ingrese valor "<<i<<": ";
+       cin>>n[i];
+       cout<<endl;
+   }
+ for (int i=1;i<=100;i++){
+       if(m[i]==n[i]){
+       cout<<"Son iguales";
+       cout<<endl;
+   }else{
+       cout<<"son diferentes";
+       cout<<endl;
+   }
+   }
+  return 0;
+
+}
+
+Diseñe un programa que lea un número cualquiera y lo busque en el vector X, el cual tiene almacenado 80 elementos. Escribir la  posición donde se encuentra almacenado el número en el vector o  el mensaje “NO” si no lo encuentra. Búsqueda secuencial 
+
+Solución [Acá el codigo]
+
+#include <iostream>
+using namespace std;
+//----------------------espacio para ejercicio-------------------------------
+// vector X[80];
+//buscar la posicion donde se encuantra el elemento
+//-------------------------inicio del proceso-----------------------------------
+int main()
+{
+   int x[80];
+    int op=0,b;
+  cout << "Algoritmo" << endl; 
+  for (int i=1; i<=4;i++){
+       cout<<"Ingrese el elemento numero "<<i<<": ";
+       cin>>x[i];
+       cout<<endl;
+    }
+  cout<<"***MENU***\n\n";
+  cout<<"1: Buscar elementos en el vector\n";
+   cout<<"2: null\n\n";
+   cin>>op;
+ if (op==1){
+       cout<<"Elemento que desea buscar: ";
+           cin>>b;
+       for (int i=1;i<=80;i++){
+           if (b==x[i]){
+               cout<<"El elemento esta en la posicion: "<<i<<endl;
+            }
+       }
+   }
+return 0;
+}
+
+Diseñe un programa que lea dos vectores A y B de 20 elementos  cada uno y multipliquen el primer elemento de A con el último  elemento de B y luego el segundo elemento de A por el  diecinueveavo elemento de B y así sucesivamente hasta llegar al  veinteavo elemento de A por el primer elemento de B. El resultado de la multiplicación almacenarlo en un vector C. }
+
+Solución [Acá el codigo]
+
+#include <iostream>
+using namespace std;
+//----------------------espacio para ejercicio-------------------------------
+//a y b [20]
+//multiplicar 1 posicion con la 20 la segunda con la 19
+//-------------------------inicio del proceso-----------------------------------
+int main()
+{
+ int a[20], b[20],c[20];
+   cout<<"Algoritmo\n\n";
+   cout<<"Llenar el vector A\n";
+   for (int i=1;i<=20;i++){
+        cout<<"Valor "<<i<<": ";
+        cin>>a[i];
+        cout<<endl;
+    }
+  cout<<"Llenar el vector B\n";
+   for (int i=1;i<=20;i++){
+        cout<<"Valor "<<i<<": ";
+        cin>>b[i];
+        cout<<endl;
+    }
+   cout<<"Multiplicacion\n\n";
+   for (int i=1;i<=20;i++){
+        c[i]=a[i]*b[21-i];
+         }
+    for (int i=1;i<=20;i++){
+        cout<<"Multiplicacion: "<<c[i];
+        cout<<endl;
+        }
+return 0;
+}
+
+Diseñe un programa que almacene en un vector llamado FIB[100] los 100 primeros números de la serie fibonacci. 
+
+
+Solución [Acá el codigo]
+
+#include <iostream>
+using namespace std;
+//----------------------espacio para ejercicio-------------------------------
+//serie fibonaci;
+//-------------------------inicio del proceso-----------------------------------
+int main()
+{
+  int anterior1=1, anterior2=1, fibo=1,numero=0;
+    cout<<"Hasta que valor se realizara la serie: ";
+    cin>>numero;
+    cout<<endl;
+     for (int i=2;i<=numero;i++){
+        cout<<fibo;
+        cout<<endl;
+        fibo=anterior1+anterior2;
+        anterior1=anterior2;
+        anterior2=fibo;
+         }
+     return 0;
+}
+
+
